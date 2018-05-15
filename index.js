@@ -26,6 +26,6 @@ app.use('/api', require('./app/routes'));
 
 // esse Handler fica depois das rotas
 app.use(Raven.errorHandler());
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 
 module.exports = app;
